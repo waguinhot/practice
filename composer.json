@@ -1,0 +1,14 @@
+{
+    "name": "wagner/pi",
+    "autoload": {
+        "psr-4": {
+            "Wagner\\Pi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wagner"
+        }
+    ],
+    "require": {}
+}
