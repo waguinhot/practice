@@ -9,6 +9,14 @@ use Wagner\Pi\Application\Response\JsonResponseService;
 use Wagner\Pi\Infrastructure\Persistence\NoteRepository;
 
 class NoteController {
+
+    public function index(){
+        $repository = new NoteRepository(ConfigMysql::conect());
+        $data = $repository->getAll();
+        // var_dump($data);
+         return JsonResponseService::sendJsonResponse(['status' => 'succes' , 'data' => [$data]] , 200);
+
+    }
     public function store()
     {   
 
